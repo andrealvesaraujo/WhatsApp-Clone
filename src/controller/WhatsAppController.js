@@ -4,6 +4,13 @@ class WhatsAppController {
    // npm init --> Cria pacote node
    // npm install webpack@3.1.0 --save  
    // npm install webpack-dev-server@2.5.1 --save
+
+   // Configurando Webpack
+   // Criar webpack.config.js na raiz
+   // Preencher webpack.config.js com as informações necessárias
+   // ADD script desse documento no html
+   // Add no package.json os scripts de build e start
+   // Execute o "npm run start" e acesse o site
     
     constructor() {
 
