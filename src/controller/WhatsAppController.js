@@ -1,5 +1,10 @@
 class WhatsAppController {
 
+   // Instalando Webpack
+   // npm init --> Cria pacote node
+   // npm install webpack@3.1.0 --save  
+   // npm install webpack-dev-server@2.5.1 --save
+    
     constructor() {
 
         this.elementsPrototype();
