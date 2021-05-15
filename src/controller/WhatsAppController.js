@@ -1,4 +1,7 @@
-class WhatsAppController {
+import {Format} from './../utils/Format';
+import {CameraController} from './CameraController';
+
+export class WhatsAppController {
 
    // Instalando Webpack
    // npm init --> Cria pacote node
@@ -221,7 +224,7 @@ class WhatsAppController {
             this.closeAllMainPanel();
             this.el.panelCamera.addClass('open');
             this.el.panelCamera.css({
-                'height': 'calc(100% - 120px)'
+                'height': 'calc(100%)'
             });
 
             this._camera = new CameraController(this.el.videoCamera);
