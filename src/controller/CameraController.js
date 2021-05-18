@@ -28,7 +28,7 @@ export class CameraController {
 
     }
 
-    takePicture(mimetype = 'image/png') {
+    takePicture(mimeType = 'image/png') {
 
         let canvas = document.createElement('canvas');
 
@@ -39,7 +39,7 @@ export class CameraController {
 
         context.drawImage(this._videoEl, 0, 0, canvas.width, canvas.height);
 
-        return canvas.toDataURL(mimetype);
+        return canvas.toDataURL(mimeType);
 
     }
 
