@@ -283,12 +283,20 @@ export class WhatsAppController {
         this.el.inputDocument.on('change', e=>{
 
             if(this.el.inputDocument.files.length) {
+
+                this.el.panelDocumentPreview.css({
+                    'height': '1%'
+                });
                 
                 let file = this.el.inputDocument.files[0];
 
                 this._documentPreviewController = new DocumentPreviewController(file);
 
                 this._documentPreviewController.getPreviewData().then(result=>{
+
+                    this.el.panelDocumentPreview.css({
+                        'height': 'calc(100%)'
+                    });
 
                     this.el.imgPanelDocumentPreview.src = result.src;
                     this.el.infoPanelDocumentPreview.innerHTML = result.info;
@@ -297,7 +305,9 @@ export class WhatsAppController {
 
                 }).catch(err=>{
 
-                    console.log(file.type);
+                    this.el.panelDocumentPreview.css({
+                        'height': 'calc(100%)'
+                    });
 
                     switch(file.type) {
 
