@@ -319,11 +319,11 @@ export class Message extends Model {
     
             uploadTask.on('state_changed', e => {
     
-                console.info('upload', e);
+                // console.info('upload', e);
                 
             }, err => {
                 
-                console.error('upload', err);
+                // console.error('upload', err);
     
             }, () => {
  
