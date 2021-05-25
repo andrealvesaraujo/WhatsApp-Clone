@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import 'firebase/storage';
 
 
 export class Firebase {
@@ -13,7 +14,7 @@ export class Firebase {
             apiKey: "AIzaSyAjQV9_dbBpgO-Tbh85zuAzIeuTbulai-w",
             authDomain: "whatsapp-clone-10d38.firebaseapp.com",
             projectId: "whatsapp-clone-10d38",
-            storageBucket: "whatsapp-clone-10d38.appspot.com",
+            storageBucket: "gs://whatsapp-clone-10d38.appspot.com",
             messagingSenderId: "151502959867",
             appId: "1:151502959867:web:829119f1a3214fda772c5e"
         };
