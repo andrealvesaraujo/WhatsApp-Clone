@@ -149,15 +149,9 @@ export class Message extends Model {
 
                     let img = div.querySelector('.photo-contact-sended');
                     img.src = this.content.photo;
-                    img.show();                    
+                    img.show();                  
 
                 }
-
-                div.querySelector('.btn-message-send').on('click', e=>{
-
-                    console.log('Enviar mensagem');
-
-                });
 
             break;
 
