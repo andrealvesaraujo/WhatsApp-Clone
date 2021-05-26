@@ -101,13 +101,14 @@ export class Message extends Model {
     getViewElement(me = true) {
 
         let div = document.createElement('div');
+        div.id = `_${this.id}`
         div.className = 'message';
 
         switch(this.type) {
 
             case 'contact':
                 div.innerHTML = `
-                    <div class="_3_7SH kNKwo tail" id="_${this.id}">
+                    <div class="_3_7SH kNKwo tail">
                         <span class="tail-container"></span>
                         <span class="tail-container highlight"></span>
                         <div class="_1YNgi copyable-text">
@@ -128,7 +129,7 @@ export class Message extends Model {
                                     </div>
                                 </div>
                                 <div class="_1lC8v">
-                                    <div dir="ltr" class="_3gkvk selectable-text invisible-space copyable-text">Nome do Contato Anexado</div>
+                                    <div dir="ltr" class="_3gkvk selectable-text invisible-space copyable-text">${this.content.name}</div>
                                 </div>
                                 <div class="_3a5-b">
                                     <div class="_1DZAH" role="button">
@@ -143,11 +144,26 @@ export class Message extends Model {
 
                     </div>
                 `;
+
+                if(this.content.photo) {
+
+                    let img = div.querySelector('.photo-contact-sended');
+                    img.src = this.content.photo;
+                    img.show();                    
+
+                }
+
+                div.querySelector('.btn-message-send').on('click', e=>{
+
+                    console.log('Enviar mensagem');
+
+                });
+
             break;
 
             case 'image':
                 div.innerHTML = `
-                    <div class="_3_7SH _3qMSo" id="_${this.id}">
+                    <div class="_3_7SH _3qMSo">
                         <div class="KYpDv">
                             <div>
                                 <div class="_3v3PK" style="width: 330px; height: 330px;">
@@ -202,7 +218,7 @@ export class Message extends Model {
 
             case 'document':
                 div.innerHTML = `
-                    <div class="_3_7SH _1ZPgd" id="_${this.id}">
+                    <div class="_3_7SH _1ZPgd" >
                         <div class="_1fnMt _2CORf">
                             <a class="_1vKRe" href="#">
                                 <div class="_2jTyA" style="background-image: url(${this.preview})"></div>
@@ -252,7 +268,7 @@ export class Message extends Model {
 
             case 'audio':
                 div.innerHTML = `
-                    <div class="_3_7SH _17oKL" id="_${this.id}">
+                    <div class="_3_7SH _17oKL">
                         <div class="_2N_Df LKbsn">
                             <div class="_2jfIu">
                                 <div class="_2cfqh">
@@ -332,7 +348,7 @@ export class Message extends Model {
 
             default:
                 div.innerHTML = `
-                    <div class="font-style _3DFk6 tail" id="_${this.id}">
+                    <div class="font-style _3DFk6 tail">
                         <span class="tail-container"></span>
                         <span class="tail-container highlight"></span>
                         <div class="Tkt2p">
@@ -471,6 +487,12 @@ export class Message extends Model {
  
         });
         
+    }
+
+    static sendContact(chatId, from, contact) {
+
+        return Message.send(chatId, from, 'contact', contact);
+
     }
 
     static send(chatId, from, type, content) {
