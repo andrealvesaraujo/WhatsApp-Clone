@@ -7,7 +7,7 @@ Projeto desenvolvido como exemplo do Curso Completo de JavaScript na Udemy.com.
 
 ### Recursos Usados
 
-Lista de recursos usados em aula para este projeto
+Lista de recursos usados para este projeto
 
 | Recurso | Link |
 | ------ | ------ |
