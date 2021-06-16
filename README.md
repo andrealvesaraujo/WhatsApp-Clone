@@ -22,4 +22,14 @@ Lista de recursos usados para este projeto
 
 ### Uso do Projeto
 
+### Instalação
 
+```
+npm install
+```
+
+### Executando servidor
+
+```
+npm start
+```
