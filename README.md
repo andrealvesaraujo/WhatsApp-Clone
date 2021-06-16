@@ -1,9 +1,10 @@
 # Projeto WhatsApp Clone
 
-Projeto desenvolvido como exemplo do Curso Completo de JavaScript na Udemy.com.
+Projeto do WhatsApp Clone desenvolvida no Curso Completo de JavaScript na Udemy.com em 2021
+(https://www.udemy.com/course/javascript-curso-completo/). 
 
-### Projeto
-![WhatsApp Clone](https://firebasestorage.googleapis.com/v0/b/hcode-com-br.appspot.com/o/whatsapp.jpg?alt=media&token=5fc78e3b-4871-424f-abfa-b765f2515d0c)
+### Detalhes
+
 
 ### Recursos Usados
 
@@ -17,3 +18,8 @@ Lista de recursos usados para este projeto
 | Cloud Storage | https://firebase.google.com/docs/storage/?authuser=0 |
 | PDF.js | https://mozilla.github.io/pdf.js/ |
 | MediaDevices.getUserMedia() | https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia |
+
+
+### Uso do Projeto
+
+
