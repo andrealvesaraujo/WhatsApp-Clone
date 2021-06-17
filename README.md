@@ -3,9 +3,6 @@
 Projeto do WhatsApp Clone desenvolvida no Curso Completo de JavaScript na Udemy.com em 2021
 (https://www.udemy.com/course/javascript-curso-completo/). 
 
-### Detalhes
-
-
 ### Recursos Usados
 
 Lista de recursos usados para este projeto
@@ -32,4 +29,7 @@ npm install
 
 ```
 npm start
+
 ```
+Acesse: http://localhost:8080/
+
